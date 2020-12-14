@@ -3,9 +3,22 @@
 <head>
   <meta>
   <title>@model.title</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel='stylesheet' href="/stylesheets/css/sb-admin-2.min.css" />
+  <link rel='stylesheet' href="/stylesheets/fontawesome-free/css/all.min.css" />
 </head>
 <body>
   @html.block('content')
+
+
+    <script src="/javascripts/jquery/jquery.min.js"></script>
+    <script src="/javascripts/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/javascripts/jquery-easing/jquery.easing.min.js"></script>
+
+    <script src="/javascripts/sb-admin-2.min.js"></script>
 </body>
 </html>
