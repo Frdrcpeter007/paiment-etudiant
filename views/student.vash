@@ -156,29 +156,28 @@
                          <form class="user" style="width: 45%">
                           <div class="form-group">
                                 <input type="text" class="form-control form-control-user"
-                                    id="" aria-describedby="emailHelp"
-                                    placeholder="Nom">
+                                    id="name" aria-describedby="name" placeholder="Nom" name="name">
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user"
-                                    id="" aria-describedby="emailHelp"
+                                    id="" aria-describedby="lastName" name="lastName"
                                     placeholder="Postnom">
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user"
-                                    id="" aria-describedby="emailHelp"
+                                    id="" aria-describedby="firstName" name="firstName"
                                     placeholder="Prénom">
                             </div>
                             <div class="form-group">
                                 <label>Sexe</label>
-                                <select class="form-control "  placeholder="Type de compte">
+                                <select class="form-control"  placeholder="Genre" id="gender" name="gender">
                                     <option>Masculin</option>
                                     <option value="F">Féminin</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label>Promotion</label>
-                                <select name="" id="" class="form-control">
+                                <select name="promotion" id="promotion" class="form-control">
                                     <option value="P1A">P1A</option>
                                     <option value="P1B">P1B</option>
                                     <option value="P1C">P1C</option>
@@ -197,7 +196,6 @@
                                     <option value="L1GL">L1GL</option>
                                     <option value="L2BDD">L1BDD</option>
                                     <option value="L2GL">L2GL</option>
-
                                 </select>
                             </div>
                             <input type="submit" class="btn btn-primary btn-user btn-block" value="Enregistrer">

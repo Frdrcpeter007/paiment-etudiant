@@ -2,7 +2,7 @@ var express = require('express'),
   router = express.Router(),
   API = require('../includes/config').URL().API,
   functions = require('../includes/modules'),
-  app = express();
+ app = express();
 
   /** Module d'enregistrement d'etudiant */
 
@@ -39,6 +39,17 @@ var express = require('express'),
     }
   
   })
+  
+  /** Module de recupration de l'etudant */
 
+
+  router.get('/', (req, res) => {
+      var Url = `${API}/api/students/gets`;
+      functions.axiosPostRequest(url, (statusCode, state, data) => {
+          state ? res.status(statusCode).send(data)
+          : res.status(500).send(data)
+      })
+
+  })
 
   module.exports = router;
