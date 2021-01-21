@@ -1,8 +1,9 @@
 var express = require('express');
 var router = express.Router();
+const middleware = require('../middlewares/Users');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', middleware.gess , function(req, res, next) {
   res.render('index', { title: 'Etudiant' });
 });
 
