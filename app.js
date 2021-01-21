@@ -51,6 +51,7 @@ app.use('/api/login', loginAPI);
 app.use('/api/student', studentAPI);
 app.use('/api/students/gets', studentAPI);
 
+
 app.use('/api/paiement', paiementAPI);
 
 // catch 404 and forward to error handler

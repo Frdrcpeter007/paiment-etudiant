@@ -43,5 +43,24 @@ const getStudent = (url, select) => {
 const ListStude = () => {
     getStudent('/api/student/get', 'student')
 }
+//
+const getStudentListe = (url, select) => {
+ getDatas(url, (state, datas) => {
+     console.log(datas);
 
-export {studentSave, ListStude}
+     datas.datas.map((item, index, tab) => {
+        if(state) {
+            $("#" + select).append(`
+            
+          `);
+         }
+     })
+ })
+}
+
+const StudentPaiementList = () => {
+    getStudentListe('/api/payments/list', 'list')
+}
+
+
+export {studentSave, ListStude, StudentPaiementList}

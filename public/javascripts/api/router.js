@@ -1,6 +1,6 @@
 import { router, routerRegex } from "./utils/helpers.js";
 import {login} from "./users.js";
-import {studentSave, ListStude} from "./student.js";
+import {studentSave, ListStude, StudentPaiementList} from "./student.js";
 import { studentPaiement } from "./paiment.js";
 
 
@@ -34,7 +34,9 @@ router('/student', () => {
     studentSave()
 });
 router('/paiement', ()=> {
-    
     ListStude();
     studentPaiement();
+});
+router('/list', ()=> {
+    StudentPaiementList();
 });
