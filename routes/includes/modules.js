@@ -5,8 +5,8 @@ module.exports = {
    * @param {*} url url a laquelle envoyé la requette
    * @param {*} callback la fonction de retour
    */
-  axiosGetRequest(url, callback) {
-    axios.get(url)
+  axiosGetRequest(url, callback, headers = null) {
+    axios.get(url, {headers})
       .then(response => {
         callback(response.status, true, response.data);
       })

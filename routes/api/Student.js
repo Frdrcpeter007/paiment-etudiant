@@ -47,12 +47,15 @@ var express = require('express'),
   /** Module de recupration de l'etudant */
 
 
-  router.get('/', (req, res) => {
-      var Url = `${API}/api/students/gets`;
-      functions.axiosPostRequest(url, (statusCode, state, data) => {
+  router.get('/get', (req, res) => {
+      var url = `${API}/students/gets`;
+      headers = {
+        'auth-token' : req.session.user.token
+      }; 
+      functions.axiosGetRequest(url, (statusCode, state, data) => {
           state ? res.status(statusCode).send(data)
           : res.status(500).send(data)
-      })
+      }, headers)
 
   })
 

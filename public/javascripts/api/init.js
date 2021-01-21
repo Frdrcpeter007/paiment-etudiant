@@ -105,5 +105,14 @@ function postFormulaire(form, button, url, block, color, callback) {
         });
     })
 }
-
-export { postForm, postFormulaire }
+function getDatas(url, callback) {
+    $.get(url, function (data) {
+      if (data.state) {
+        callback(true, data);
+      } else {
+        callback(false, data);
+      }
+    });
+  }
+  
+export { postForm, postFormulaire, getDatas }

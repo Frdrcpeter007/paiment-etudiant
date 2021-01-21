@@ -1,4 +1,4 @@
-import { postForm, postFormulaire } from './init.js';
+import { postForm, postFormulaire, getDatas } from './init.js';
 
 const studentSave = () => {
 
@@ -24,4 +24,24 @@ const studentSave = () => {
     })
 }
 
-export {studentSave}
+const getStudent = (url, select) => {
+ getDatas(url, (state, datas) => {
+     console.log(datas);
+
+     datas.datas.map((item, index, tab) => {
+        if(state) {
+            $("#" + select).append(`
+            <option value='${item._id}' >
+              ${item.name}
+            </option>
+          `);
+         }
+     })
+ })
+}
+
+const ListStude = () => {
+    getStudent('/api/student/get', 'student')
+}
+
+export {studentSave, ListStude}
