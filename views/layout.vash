@@ -51,13 +51,13 @@
             </li>
              <li class="nav-item">
                 <a class="nav-link collapsed" href="/paiement" >
-                    <i class="fas fa-fw fa-bank"></i>
+                    <i class="fas fa-fw fa-pen"></i>
                     <span>Paiement</span>
                 </a>
             </li>
              <li class="nav-item">
                 <a class="nav-link collapsed" href="/list" >
-                    <i class="fas fa-fw fa-bank"></i>
+                    <i class="fas fa-fw fa-list"></i>
                     <span>Liste</span>
                 </a>
             </li>
