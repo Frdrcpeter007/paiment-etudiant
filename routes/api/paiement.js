@@ -7,22 +7,20 @@ var express = require('express'),
     app = express();
 
 /** Module de paiement */ 
-router.post('/paiement', (req, res) => {
-    var url = `${API}/api/payments/save`,
+router.post('/', (req, res) => {
+    var url = `${API}/payments/save`,
     datas = {
         student: req.body.student,
-        amount: req.body.amount,
+        amount: parseFloat(req.body.amount),
         tranche: req.body.tranche
-    };
+    },
+    headers = {
+        'auth-token' : req.session.user.token
+      };
     if(functions.NoEmpty(datas)) {
-        functions.axiosGetRequest(url, datas, (statuaCode, state, response) => {
-            if(state) {
-                var { resultat } = response;
-                res.status(statusCode).send(response);
-            }else{
-                res.status(statusCode).send(response);
-            }
-        })
+        functions.axiosPostRequest(url, datas, (statusCode, state, response) => {
+            res.status(statusCode).send(response);
+        }, headers)
     }else {
         res.send({
             status : false,

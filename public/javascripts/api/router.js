@@ -1,6 +1,7 @@
 import { router, routerRegex } from "./utils/helpers.js";
 import {login} from "./users.js";
 import {studentSave, ListStude} from "./student.js";
+import { studentPaiement } from "./paiment.js";
 
 
 //Pour desérialiser
@@ -33,6 +34,7 @@ router('/student', () => {
     studentSave()
 });
 router('/paiement', ()=> {
-    alert('qqq')
+    
     ListStude();
+    studentPaiement();
 });

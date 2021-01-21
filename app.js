@@ -15,8 +15,10 @@ var dashboardRouter = require('./routes/dashboard');
 var studentRouter = require('./routes/student');
 var paiementRouter = require('./routes/paiement');
 
+
 var loginAPI = require('./routes/api/login');
 var studentAPI = require('./routes/api/Student');
+var paiementAPI = require('./routes/api/paiement');
 
 
 var app = express();
@@ -46,6 +48,8 @@ app.use('/paiement', paiementRouter);
 app.use('/api/login', loginAPI);
 app.use('/api/student', studentAPI);
 app.use('/api/students/gets', studentAPI);
+
+app.use('/api/paiement', paiementAPI);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
