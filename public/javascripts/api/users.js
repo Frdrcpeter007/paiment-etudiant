@@ -4,7 +4,7 @@ const login = () => {
     postFormulaire("loginForm", "btn-login", "/api/login", "container-login", "pink", (result) => {
         console.log(result)
         if (result.state) {
-            window.location.href = '/student'
+            window.location.href = '/list'
         } else {
             swal({
                 title: "Erreur !",
