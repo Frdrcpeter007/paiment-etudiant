@@ -29,7 +29,27 @@ const list = () => {
         console.log(datas);
    
         datas.datas.map((item, index, tab) => {
-           //Le tableau
+           if(state) {
+               $("#listPaiyementStudent").append(`
+                <tr>
+                    <td>
+                        ${item.student.name.toUpperCase()}
+                    </td>
+                    <td>
+                        ${item.student.lastName.toUpperCase()}
+                    </td>
+                    <td>
+                        ${item.student.firstName.toUpperCase()}
+                    </td>
+                    <td>
+                        ${item.student.promotion}
+                    </td>
+                    <td>
+                        ${item.totalAmount} $
+                    </td>
+                </tr>
+               `)
+           }
         })
     })
 }
