@@ -24,5 +24,14 @@ const studentPaiement = () => {
     })
 }
 
+const list = () => {
+    getDatas('/api/paiement/list', (state, datas) => {
+        console.log(datas);
+   
+        datas.datas.map((item, index, tab) => {
+           //Le tableau
+        })
+    })
+}
 
-export {studentPaiement}
+export {studentPaiement, list as listPayment}

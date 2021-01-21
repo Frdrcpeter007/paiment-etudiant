@@ -59,19 +59,4 @@ var express = require('express'),
 
   });
 
-/** Module de recuperation de la liste de paiements */   
-
-router.get('/paiement', (req, res) => {
-    var url = `${API}/admin/payments/list/by/student`;
-    headers = {
-      'auth-token' : req.session.user.token
-    }; 
-    functions.axiosGetRequest(url, (statusCode, state, data) => {
-        state ? res.status(statusCode).send(data)
-        : res.status(500).send(data)
-    }, headers)
-
-});
-
-
   module.exports = router;

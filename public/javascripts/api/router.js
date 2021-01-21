@@ -1,7 +1,7 @@
 import { router, routerRegex } from "./utils/helpers.js";
 import {login} from "./users.js";
 import {studentSave, ListStude, StudentPaiementList} from "./student.js";
-import { studentPaiement } from "./paiment.js";
+import { listPayment, studentPaiement } from "./paiment.js";
 
 
 //Pour desérialiser
@@ -38,5 +38,5 @@ router('/paiement', ()=> {
     studentPaiement();
 });
 router('/list', ()=> {
-    StudentPaiementList();
+    listPayment()
 });
