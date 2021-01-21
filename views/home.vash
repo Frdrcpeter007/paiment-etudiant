@@ -1,4 +1,4 @@
-@html.extend('layout', function (model) {
+@html.extend('dash', function (model) {
 @html.block('content', function (model) {
        <!-- Page Wrapper -->
     <div id="wrapper">

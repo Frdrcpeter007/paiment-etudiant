@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta>
+  <title>@model.title</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel='stylesheet' href="/stylesheets/css/sb-admin-2.min.css" />
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel='stylesheet' href="/stylesheets/fontawesome-free/css/all.min.css" />
+</head>
+<body id="page-top">
+  <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">ISI PAIE <sup>2</sup></div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Operation
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/student" >
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Etudiant</span>
+                </a>
+            </li>
+             <li class="nav-item">
+                <a class="nav-link collapsed" href="/paiement" >
+                    <i class="fas fa-fw fa-pen"></i>
+                    <span>Paiement</span>
+                </a>
+            </li>
+             <li class="nav-item">
+                <a class="nav-link collapsed" href="/list" >
+                    <i class="fas fa-fw fa-list"></i>
+                    <span>Liste</span>
+                </a>
+            </li>
+
+        </ul>
+  @html.block('content')
+  </div>
+
+
+    <script src="/javascripts/jquery/jquery.min.js"></script>
+    <script src="/javascripts/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/javascripts/jquery-easing/jquery.easing.min.js"></script>
+
+    <script src="/javascripts/sb-admin-2.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/javascripts/api/utils/functions.js" type="module"></script>
+    <script src="/javascripts/api/router.js" type="module"></script>
+</body>
+</html>
