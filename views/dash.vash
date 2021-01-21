@@ -21,7 +21,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">ISI PAIE <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">ISI PAIE<sup>2</sup></div>
             </a>
 
             <!-- Divider -->
@@ -44,7 +44,7 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             @{
-                if(model.isAdminBudget){
+                if(model.isAdminBudget == false){
                     <li class="nav-item">
                         <a class="nav-link collapsed" href="/student" >
                             <i class="fas fa-fw fa-user"></i>
