@@ -17,10 +17,10 @@ router.post('/', (req, res) => {
 		functions.axiosPostRequest(url, datas, (statusCode, state, response) => {
 			if (state) {
 				var { datas } = response;
-				res.status(statusCode).send(response);
-			} else {
-				res.status(statusCode).send(response);
+				req.session.user = datas;
 			}
+			
+			res.status(statusCode).send(response);
 		})
 	} else {
 		res.send({
