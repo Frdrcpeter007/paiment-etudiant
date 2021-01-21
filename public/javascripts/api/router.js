@@ -1,5 +1,6 @@
 import { router, routerRegex } from "./utils/helpers.js";
-import {login} from "./users.js"
+import {login} from "./users.js";
+import {studentSave} from "./student.js";
 
 //Pour desérialiser
 $.unserialize = function(serializedString) {
@@ -26,4 +27,7 @@ $.unserialize = function(serializedString) {
 
 router('/', () => {
     login()
+});
+router('/student', () => {
+    studentSave()
 })

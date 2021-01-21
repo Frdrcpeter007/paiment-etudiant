@@ -1,3 +1,5 @@
+const { head } = require('..');
+
 var express = require('express'),
   router = express.Router(),
   API = require('../includes/config').URL().API,
@@ -8,21 +10,23 @@ var express = require('express'),
 
   
   router.post('/save', (req, res) => {
-    var url = `${API}/api/students/save`,
-      
+    var url = `${API}/students/save`,
+    
       datas = {
         name: req.body.name,
         firstName: req.body.firstName,
-        lastName: req.body.lastName,
-        gender: gender,
+        lastName: req.body.lastName,    
+        gender: req.body.gender,
         phone: req.body.phone,
         promotion: req.body.promotion,
         academicYear: req.body.academicYear,
   
+      },
+      headers = {
+        'auth-token' : req.session.user.token
       };
 
     if (functions.NoEmpty(datas)) {
-      datas.residence = resi;
       functions.axiosPostRequest(url, datas, (statusCode, state, response) => {
         if (state) {
           var { result } = response;
@@ -30,7 +34,7 @@ var express = require('express'),
         } else {
           res.status(statusCode).send(response);
         }
-      })
+      }, headers)
     } else {
       res.send({
         state: false,

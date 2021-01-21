@@ -2,7 +2,7 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
-const session = require('express-session');
+const session = require('cookie-session');
 var logger = require('morgan');
 const dotenv = require('dotenv');
 
@@ -16,6 +16,7 @@ var studentRouter = require('./routes/student');
 var paiementRouter = require('./routes/paiement');
 
 var loginAPI = require('./routes/api/login');
+var studentAPI = require('./routes/api/Student');
 
 var app = express();
 
@@ -39,7 +40,10 @@ app.use('/dashboard', dashboardRouter);
 app.use('/student', studentRouter);
 app.use('/paiement', paiementRouter);
 
+//  API URL
+
 app.use('/api/login', loginAPI);
+app.use('/api/student', studentAPI);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

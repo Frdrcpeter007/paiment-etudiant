@@ -20,8 +20,8 @@ module.exports = {
    * @param {*} datas les donnees a enregistrer
    * @param {*} callback la fonction de retour
    */
-  axiosPostRequest(url, datas, callback) {
-    axios.post(url, datas)
+  axiosPostRequest(url, datas, callback, headers = null) {
+    axios.post(url, datas, {headers})
       .then(response => {
 
         if (response.data.state) {
