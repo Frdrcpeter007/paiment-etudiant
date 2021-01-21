@@ -14,6 +14,7 @@ var homeRouter = require('./routes/home');
 var dashboardRouter = require('./routes/dashboard');
 var studentRouter = require('./routes/student');
 var paiementRouter = require('./routes/paiement');
+var listRouter = require('./routes/list');
 
 
 var loginAPI = require('./routes/api/login');
@@ -42,6 +43,7 @@ app.use('/home', homeRouter);
 app.use('/dashboard', dashboardRouter);
 app.use('/student', studentRouter);
 app.use('/paiement', paiementRouter);
+app.use('/list', listRouter);
 
 //  API URL
 
