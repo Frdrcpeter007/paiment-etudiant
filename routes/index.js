@@ -7,4 +7,9 @@ router.get('/', middleware.gess, (req, res, next) => {
   res.render('index', { title: 'Etudiant' });
 });
 
+router.get('/logout', (req, res) => {
+  req.session = undefined;
+  res.redirect(301, '/');
+})
+
 module.exports = router;
