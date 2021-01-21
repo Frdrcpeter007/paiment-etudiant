@@ -1,6 +1,6 @@
 @html.extend('layout', function(model) {
   @html.block('content', function(model) {
-
+    
     <div class="container">
         <div class="row justify-content-center">
 
@@ -9,7 +9,7 @@
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0" id="container-login">
                         <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image" style="background-image: url(https://image.freepik.com/vecteurs-libre/nouvelle-illustration-concept-message_114360-636.jpg);"></div>
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
