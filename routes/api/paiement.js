@@ -1,5 +1,3 @@
-const { response } = require('express');
-
 var express = require('express'),
     router = express.Router(),
     API = require('../includes/config').URL().API,
@@ -28,5 +26,17 @@ router.post('/', (req, res) => {
         })
     }
 })
+
+router.get('/list', (req, res) => {
+    var url = `${API}/payments/list/by/student`;
+    headers = {
+      'auth-token' : req.session.user.token
+    }; 
+    functions.axiosGetRequest(url, (statusCode, state, data) => {
+        state ? res.status(statusCode).send(data)
+        : res.status(500).send(data)
+    }, headers)
+
+});
 
 module.exports = router;
