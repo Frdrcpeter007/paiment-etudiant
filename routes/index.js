@@ -3,7 +3,7 @@ var router = express.Router();
 const middleware = require('../middlewares/Users');
 
 /* GET home page. */
-router.get('/', middleware.gess , function(req, res, next) {
+router.get('/', middleware.gess, (req, res, next) => {
   res.render('index', { title: 'Etudiant' });
 });
 
